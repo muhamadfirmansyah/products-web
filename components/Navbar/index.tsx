@@ -29,13 +29,17 @@ const Navbar: NextComponentType = () => {
                         </div>
                     </div>
                     <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-                        <a href="#" className="font-medium text-gray-700 hover:text-gray-900">About</a>
+                        <Link href={'/about'}>
+                            <a className={`${router.pathname.startsWith('/about') ? 'text-green-600' : 'font-medium text-gray-700 hover:text-gray-900'}`}>About</a>
+                        </Link>
 
                         <Link href="/products">
                             <a className={`${router.pathname.startsWith('/products') ? 'text-green-600' : 'font-medium text-gray-700 hover:text-gray-900'}`}>Product</a>
                         </Link>
 
-                        <a href="#" className="font-medium text-gray-700 hover:text-gray-900">Service</a>
+                        <Link href={'/blogs'}>
+                            <a className={`${router.pathname.startsWith('/blogs') ? 'text-green-600' : 'font-medium text-gray-700 hover:text-gray-900'}`}>Blogs</a>
+                        </Link>
 
                         <a href="#" className="font-medium text-gray-700 hover:text-gray-900">Contact</a>
                     </div>

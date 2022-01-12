@@ -13,7 +13,7 @@ type ProductListProps = {
 
 const ProductList = ({ products }: ProductListProps) => {
     return (
-        <div className="bg-white">
+        <div>
             <div className="mx-auto py-16">
                 <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">Our Products</h2>
                 <Link href={'/products/create' }>

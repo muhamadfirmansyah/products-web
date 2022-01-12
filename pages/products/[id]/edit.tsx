@@ -1,8 +1,11 @@
+import { GetServerSideProps, GetServerSidePropsContext } from "next"
 import Head from "next/head"
 import Layout from "../../../components/Layout"
 import ProductForm from "../../../components/ProductForm"
 
-const ProductEdit = ({ product }: any) => {
+import { ProductProps } from "../../../components/ProductForm"
+
+const ProductEdit = ({ product }: { product: ProductProps }) => {
     return (
         <Layout>
             <Head>
@@ -14,8 +17,8 @@ const ProductEdit = ({ product }: any) => {
     )
 }
 
-export async function getServerSideProps(context: any) {
-    const req = await fetch(`https://api-products-server.herokuapp.com/products/${context.params.id}`)
+export const getServerSideProps: GetServerSideProps = async (context) => {
+    const req = await fetch(`https://api-products-server.herokuapp.com/products/${context.params?.id}`)
     const res = await req.json()
 
     return {

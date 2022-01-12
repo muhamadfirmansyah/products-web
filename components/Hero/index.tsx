@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Hero: NextComponentType = () => {
     return (
-        <div className="bg-green-800 text-white relative px-[72px] py-[72px] mt-[32px]">
+        <div className="bg-green-800 text-white relative px-[72px] py-[72px] mt-[32px] max-w-7xl mx-auto">
             <div className="grid grid-cols-2 gap-[72px]">
                 <div className="d-flex align-middle">
                     <h1 className="font-sans text-8xl font-extrabold"><span className="text-yellow-400">Prodtr</span> products</h1>
